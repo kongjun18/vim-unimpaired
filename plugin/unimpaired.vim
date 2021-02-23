@@ -125,6 +125,9 @@ function! s:fnameescape(file) abort
   endif
 endfunction
 
+call s:map('n', ']f', '<Nop>')
+call s:map('n', '[f', '<Nop>')
+
 " Section: Diff
 
 call s:map('n', '[n', '<Plug>unimpairedContextPrevious')
