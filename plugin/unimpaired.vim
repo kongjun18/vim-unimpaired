@@ -125,11 +125,6 @@ function! s:fnameescape(file) abort
   endif
 endfunction
 
-nnoremap <silent> <Plug>unimpairedDirectoryNext     :<C-U>edit <C-R>=<SID>fnameescape(fnamemodify(<SID>FileByOffset(v:count1), ':.'))<CR><CR>
-nnoremap <silent> <Plug>unimpairedDirectoryPrevious :<C-U>edit <C-R>=<SID>fnameescape(fnamemodify(<SID>FileByOffset(-v:count1), ':.'))<CR><CR>
-call s:map('n', ']f', '<Plug>unimpairedDirectoryNext')
-call s:map('n', '[f', '<Plug>unimpairedDirectoryPrevious')
-
 " Section: Diff
 
 call s:map('n', '[n', '<Plug>unimpairedContextPrevious')
